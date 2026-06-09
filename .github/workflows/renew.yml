@@ -16,7 +16,7 @@ jobs:
         run: |        
           # 计算当前 Unix 天数 (UTC)
           DAYS=$(( $(date -u +%s) / 86400 ))
-          REMAINDER=$(( $DAYS % 4 ))
+          REMAINDER=$(( $DAYS % 1 ))
           
           if [ $REMAINDER -ne 0 ]; then
             echo "should_skip=true" >> $GITHUB_OUTPUT
